@@ -16,6 +16,7 @@
 /* Estilos do Corpo do Site */
 body {
     font-family: 'Inter', sans-serif; 
+     padding-top: 90px;
   /*  letter-spacing: 1px;*/
     background-color: #FFFFFF;
 }
@@ -82,7 +83,7 @@ body {
 #bambooBikeCarousel .carousel-item {
     height: 400px;
     background-color: #eee;
-    display: flex;
+   /* display: flex;*/
     align-items: center;
     justify-content: center;
 }
