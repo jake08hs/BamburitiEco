@@ -8,16 +8,17 @@
     /* src: url('../fonts/SIMPLIFICA Typeface.woff2') format('woff2'), NÃO ESQUECER DE INSERIR PELA COMPATIBILIDADE
            url('../fonts/SIMPLIFICA Typeface.woff') format('woff'),
            url('../fonts/SIMPLIFICA Typeface.ttf') format('truetype'); */
-    font-weight: normal; /* Simplifica geralmente tem um único peso */
+    font-weight: normal;
+    /* Simplifica geralmente tem um único peso */
     font-style: normal;
     font-display: swap;
 }
 
 /* Estilos do Corpo do Site */
 body {
-    font-family: 'Inter', sans-serif; 
-     padding-top: 90px;
-  /*  letter-spacing: 1px;*/
+    font-family: 'Inter', sans-serif;
+    padding-top: 90px;
+    /*  letter-spacing: 1px;*/
     background-color: #FFFFFF;
 }
 
@@ -25,6 +26,7 @@ body {
 .text-green-main {
     color: #00A550 !important;
 }
+
 .bg-green-main {
     background-color: #00A550 !important;
 }
@@ -33,11 +35,11 @@ body {
 .custom-navbar {
     background-color: #FFFFFF !important;
     border-bottom: 2px solid #00A550;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .navbar-brand {
-    font-family: 'Simplifica', sans-serif; 
+    font-family: 'Simplifica', sans-serif;
     font-weight: 700;
     font-size: 26px;
     color: #00A550 !important;
@@ -51,27 +53,30 @@ body {
 }
 
 .nav-link {
-    font-family: 'Inter', sans-serif; 
-    font-weight: 400; 
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
     font-size: 14px !important;
     color: #000000 !important;
     padding: 0.5rem 1rem !important;
     transition: color 0.3s ease, font-weight 0.3s ease;
+    transform: scale(1.15); 
 }
 
 .nav-link:hover,
 .nav-link.active {
     color: #00A550 !important;
-    font-weight: 700 !important; 
+    font-weight: 700 !important;
 }
 
 .nav-item .bi {
     font-size: 1.2rem;
     vertical-align: middle;
 }
+
 .nav-item .bi.bi-person-circle {
     margin-right: 10px;
 }
+
 .nav-item .bi.bi-cart {
     margin-left: 15px;
 }
@@ -80,13 +85,24 @@ body {
 #bambooBikeCarousel .carousel-inner {
     height: 400px;
 }
+.cart-icon-link:hover {
+  transform: scale(1.15); 
+  opacity: 0.8;
+}
+
+.cart-icon-link {
+  display: inline-block; 
+  transition: all 0.2s ease-in-out;
+}
+
 #bambooBikeCarousel .carousel-item {
     height: 400px;
     background-color: #eee;
-   /* display: flex;*/
+    /* display: flex;*/
     align-items: center;
     justify-content: center;
 }
+
 #bambooBikeCarousel .carousel-img {
     object-fit: cover;
     height: 100%;
@@ -95,32 +111,40 @@ body {
 
 /* Estilos para a legenda do carrossel (h1 e h2 por cima da imagem) DESATIVADO */
 .custom-carousel-caption {
-    left: 10%; /* Ajusta a posição da esquerda, 10% é um bom ponto de partida */
-    right: auto; /* Desfaz o alinhamento à direita padrão do Bootstrap */
-    bottom: auto; /* Desfaz o alinhamento inferior padrão do Bootstrap */
-    top: 50%; /* Centraliza verticalmente */
-    transform: translateY(-50%); /* Ajuste fino para centralização vertical perfeita */
-    text-align: left; /* Garante que o texto dentro da legenda esteja alinhado à esquerda */
-    width: 60%; /* Define uma largura para o texto, ajuste conforme necessário */
-    padding-bottom: 0; /* Remove padding inferior padrão do Bootstrap */
+    left: 10%;
+    /* Ajusta a posição da esquerda, 10% é um bom ponto de partida */
+    right: auto;
+    /* Desfaz o alinhamento à direita padrão do Bootstrap */
+    bottom: auto;
+    /* Desfaz o alinhamento inferior padrão do Bootstrap */
+    top: 50%;
+    /* Centraliza verticalmente */
+    transform: translateY(-50%);
+    /* Ajuste fino para centralização vertical perfeita */
+    text-align: left;
+    /* Garante que o texto dentro da legenda esteja alinhado à esquerda */
+    width: 60%;
+    /* Define uma largura para o texto, ajuste conforme necessário */
+    padding-bottom: 0;
+    /* Remove padding inferior padrão do Bootstrap */
 }
 
 .custom-carousel-caption h1 {
     font-family: 'Simplifica', sans-serif;
-    font-size: 48px; 
-    font-weight: 700; 
-    color: #FFFFFF; 
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
+    font-size: 48px;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin-bottom: 10px;
-    line-height: 1.1; 
+    line-height: 1.1;
 }
 
 .custom-carousel-caption h2 {
-    font-family: 'Simplifica', sans-serif; 
-    font-size: 24px; 
+    font-family: 'Simplifica', sans-serif;
+    font-size: 24px;
     font-weight: 400;
     color: #FFFFFF;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.4); 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
     line-height: 1.3;
 }
 
@@ -141,19 +165,21 @@ body {
     height: 100%;
     object-fit: cover;
     z-index: 1;
-    filter: brightness(70%); /* Escurece a imagem para contraste */
+    /*filter: brightness(90%);*/
+    /* Escurece a imagem para contraste */
 }
 
 /* Conteúdo (texto) que vai por cima da imagem */
 .bike-sharing-overlay-content {
     position: relative;
     z-index: 2;
-    color: #FFFFFF; 
+    color: #FFFFFF;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-start;  
+     padding: 0 5%;
 }
 
 /* NOVO:  (coluna direita) */
@@ -169,43 +195,55 @@ body {
 /* Título da seção "Bike Sharing" (texto dentro da coluna esquerda) */
 .bike-sharing-title {
     font-family: 'Simplifica', sans-serif;
+    text-align: left;
     font-size: 32px;
     font-weight: 700;
     color: #FFFFFF;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center; 
 }
 
 /* Texto da seção "Bike Sharing" (parágrafo dentro da coluna esquerda) */
 .bike-sharing-text {
     font-family: 'Inter', sans-serif;
+    text-align: center;
     font-size: 16px;
     font-weight: 200;
     color: #FFFFFF;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
-}
-.card-bike-img {
-    height: 250px; 
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    text-align: justify; 
 }
 
+/* Parte da seção de Por que Bicicleta de Bambu  */
+.card-container-wrapper {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- CARD DE BICICLETAS --- */
+
+#nossas-bicicletas .card-img-top {
+  height: 300px;
+  object-fit: cover;
+  width: 100%;
+}
 /* Deixa o conteudo centralizado */
 .card-body {
     text-align: center;
 }
 
 .card-title {
-    font-family: 'Inter', sans-serif; 
-    color: #00A550; 
-    font-size: 20px; 
-    font-weight: 400; 
-    margin-bottom: 0.5rem; 
+    font-family: 'Inter', sans-serif;
+    color: #00A550;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
 }
 
 /* --- Estilos para o Conteúdo Principal Seções --- */
 .section-title {
-    font-family: 'Simplifica', sans-serif; 
+    font-family: 'Simplifica', sans-serif;
     color: #00A550;
     font-size: 38px;
     font-weight: 700;
@@ -213,58 +251,61 @@ body {
 
 /* Subtítulos Horário, Endereço, Contatos, Instagram */
 h3 {
-    font-family: 'Inter', sans-serif; 
+    font-family: 'Inter', sans-serif;
     font-size: 16px;
-    font-weight: 400; 
+    font-weight: 400;
     color: #000000;
 }
 
 /* Parágrafos e Endereços */
-p, address {
-    font-family: 'Inter', sans-serif; 
+p,
+address {
+    font-family: 'Inter', sans-serif;
     font-size: 14px;
     color: #000000;
-    font-weight: 200; 
+    font-weight: 200;
 }
 
 /* Links dentro de Parágrafos */
 p a {
-    font-family: 'Inter', sans-serif; 
-    font-weight: 400; 
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
     text-decoration: none;
     color: #000000;
 }
+
 p a:hover {
     color: #00A550;
 }
 
 /* Estilos para os Campos de Formulário Nome:, E-mail:, Mensagem: */
 .form-label {
-    font-family: 'Inter', sans-serif; 
-    font-size: 16px; 
-    font-weight: 400; 
-    color: #000000; 
-    margin-bottom: 0.5rem; 
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    margin-bottom: 0.5rem;
 }
 
 .form-control {
     font-family: 'Inter', sans-serif;
-    color: #000000; 
+    color: #000000;
     padding: 0.5rem 0.75rem !important;
     line-height: 1.5 !important;
-    height: auto !important;background-color: #E6F5EC !important; 
+    height: auto !important;
+    background-color: #E6F5EC !important;
     border: 1px solid #C7E0D2
 }
 
 .form-control::placeholder {
-    font-family: 'Inter', sans-serif; 
+    font-family: 'Inter', sans-serif;
     color: #888;
     opacity: 1;
 }
 
 /* Botões (COMPRAR e ENVIAR) */
 .btn-success {
-    font-family: 'Simplifica', sans-serif; 
+    font-family: 'Simplifica', sans-serif;
     background-color: #00A550 !important;
     border-color: #00A550 !important;
     border: none !important;
@@ -273,29 +314,31 @@ p a:hover {
     padding: 10px 20px !important;
     /*line-height: 1 !important;*/
     font-size: 14px !important;
-    font-weight: bold !important; 
+    font-weight: bold !important;
     display: inline-block !important;
     text-align: center !important;
     text-decoration: none !important;
-    display: inline-block !important; 
-    width: auto !important; 
+    display: inline-block !important;
+    width: auto !important;
     letter-spacing: 2px;
-    transition: background-color 0.3s ease !important; border-color: 0.3sease !important;
+    transition: background-color 0.3s ease !important;
+    border-color: 0.3sease !important;
 }
 
 .btn-success:hover {
     background-color: #247a4c !important;
     border-color: #247a4c !important;
 }
+
 .btn-subtle-radius {
-    border-radius: 8px !important; 
+    border-radius: 8px !important;
 }
 
 .mais-informacoes,
 .fale-conosco {
     background-color: #f8f9fa;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     height: 100%;
 }
 
@@ -304,8 +347,9 @@ p a:hover {
     background-color: #00A550 !important;
     color: #FFFFFF !important;
 }
+
 .bg-green-footer p {
     font-family: 'Inter', sans-serif;
     color: #FFFFFF !important;
-    font-weight: 200; 
+    font-weight: 200;
 }
