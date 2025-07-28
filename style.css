@@ -96,7 +96,7 @@ body {
 }
 
 #bambooBikeCarousel .carousel-item {
-    height: 400px;
+   /* height: 400px;*/
     background-color: #eee;
     /* display: flex;*/
     align-items: center;
@@ -194,6 +194,8 @@ body {
 
 /* Título da seção "Bike Sharing" (texto dentro da coluna esquerda) */
 .bike-sharing-title {
+     width: 50%;
+    margin-left:10%;
     font-family: 'Simplifica', sans-serif;
     text-align: left;
     font-size: 32px;
@@ -205,13 +207,15 @@ body {
 
 /* Texto da seção "Bike Sharing" (parágrafo dentro da coluna esquerda) */
 .bike-sharing-text {
+    width: 50%;
+    margin-left:10%;
     font-family: 'Inter', sans-serif;
     text-align: center;
     font-size: 16px;
     font-weight: 200;
     color: #FFFFFF;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
-    text-align: justify; 
+    /*text-align: justify; */
 }
 
 /* Parte da seção de Por que Bicicleta de Bambu  */
@@ -227,6 +231,18 @@ body {
   height: 300px;
   object-fit: cover;
   width: 100%;
+}
+
+/* --- Ajuste para os botões 'COMPRAR' nos cards de bicicleta --- */
+#nossas-bicicletas .card-body .btn {
+  align-self: flex-start;
+  min-width: 150px;
+}
+
+/* Força o alinhamento à esquerda APENAS nos cards da seção de bicicletas */
+#nossas-bicicletas .card-body {
+  text-align: left;
+  padding: 1.35rem;
 }
 /* Deixa o conteudo centralizado */
 .card-body {
@@ -353,3 +369,4 @@ p a:hover {
     color: #FFFFFF !important;
     font-weight: 200;
 }
+
